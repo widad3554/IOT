@@ -1,0 +1,13 @@
+int Sensor = A3; // Déclaration de la broche d'entrée du capteur de vibrations
+int val; // Variable temporaire
+void setup () {
+  Serial.begin(9600);
+  pinMode(Sensor, INPUT) ; // Initialisation de la broche du capteur
+}
+void loop () {
+  val = analogRead(Sensor) ; // Lecture de la valeur du signal
+  if (val > 700) {
+    Serial.println("Toc Toc");
+     Serial.println("hello thierry");
+  }
+}
